@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>最简单的 Ant Design React 独立脚本应用</title>
+
+    <!-- 引入 React 和 ReactDOM -->
+    <script src="./asset/react.18.2.0.umd.production.min.js"></script>
+    <script src="./asset/react-dom.18.2.0.umd.production.min.js"></script>
+
+    <!-- 引入 Ant Design 的依赖组件 -->
+    <script src="./asset/dayjs.1.11.10.min.js"></script>
+
+    <!-- 引入 Ant Design 的 JavaScript 文件 -->
+    <script src="./asset/antd.5.9.4.min.js"></script>
+</head>
+<body>
+
+<!-- 根标签 -->
+<div id="root"></div>
+
+<script>
+    // 使用全局变量 antd
+    const {Button} = antd;
+
+    // 将 Ant Design 按钮组件渲染到页面上
+    const app = React.createElement(Button, {type: 'primary'}, '我是一个 Ant Design 按钮');
+    ReactDOM.createRoot(document.getElementById('root')).render(app);
+</script>
+
+</body>
+</html>
